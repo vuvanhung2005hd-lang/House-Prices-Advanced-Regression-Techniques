@@ -1,6 +1,8 @@
 # 🏡 House Prices - Advanced Regression Techniques
 
-A comprehensive machine learning solution for the Kaggle competition: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques). The goal is to predict the final sale price of homes in Ames, Iowa, based on 79 explanatory variables encompassing almost every aspect of residential properties.
+A comprehensive machine learning solution for the Kaggle competition: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques). 
+
+The goal is to predict the final sale price of homes in Ames, Iowa, based on 79 explanatory variables encompassing almost every aspect of residential properties.
 
 **Kaggle Notebook:** [hngvvan / house-prices-advanced-regression-techniques](https://www.kaggle.com/code/hngvvan/house-prices-advanced-regression-techniques)
 
