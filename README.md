@@ -10,11 +10,12 @@ The goal is to predict the final sale price of homes in Ames, Iowa, based on 79 
 
 | Model / Submission | Public Score (RMSLE) |
 |---|---|
-| **Kaggle Notebook Version** | **0.15004** |
-| `submission.csv` (Direct Upload) | 0.15013 |
+| **Kaggle Notebook (Version 14)** | **0.12994** |
 
-- **Evaluation Metric:** Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. A score of `~0.15` indicates that the model's predictions are off by approximately 15% on average across the test set.
-<img width="1420" height="704" alt="score" src="https://github.com/user-attachments/assets/3020e15c-7c26-41be-a9a3-a8e64167513e" />
+- **Evaluation Metric:** Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. A score of `~0.13` indicates that the model's predictions are off by approximately 13% on average across the test set.
+
+
+<img width="1465" height="305" alt="image" src="https://github.com/user-attachments/assets/31d7c295-6efd-4310-9136-35158b576e1f" />
 
 ---
 
@@ -32,7 +33,7 @@ To ensure a robust, reproducible workflow and absolutely prevent data leakage, a
 - **Nominal Categorical Features:** Filled missing values with a constant and applied `OneHotEncoder`. The encoder was configured to ignore unknown categories, ensuring the model handles unseen variations in the hidden test set smoothly without breaking.
 
 ### 3. Modeling
-The core predictive engine is a `RandomForestRegressor`. This tree-based ensemble method was chosen for its inherent ability to capture non-linear relationships between features and its robustness against overfitting. To maintain a clean architecture, the entire workflow—from missing value imputation to the final prediction—was encapsulated within a single scikit-learn `Pipeline`.
+The core predictive engine is a `GradientBoostingRegressor`. This advanced ensemble method was chosen for its ability to sequentially build trees that correct the errors of previous ones, offering significant performance improvements over standard random forests. To maintain a clean architecture, the entire workflow—from missing value imputation to the final prediction—was encapsulated within a single scikit-learn `Pipeline`.
 
 ### 4. Target Transformation
 Given that the competition metric is RMSLE (Root Mean Squared Logarithmic Error), the model was trained directly on the natural logarithm of the target variable using `np.log1p(y_train)`. This transformation not only aligns the training objective with the evaluation metric but also normalizes the right-skewed distribution of `SalePrice`. After generating predictions, the values were converted back to standard dollar amounts using the exponential function `np.expm1(val_pred)`.
