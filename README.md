@@ -10,7 +10,7 @@ The goal is to predict the final sale price of homes in Ames, Iowa, based on 79 
 
 | Model / Submission | Public Score (RMSLE) |
 |---|---|
-| **Kaggle Notebook (Version 14)** | **0.12994** |
+| **Kaggle Notebook ** | **0.12953** |
 
 - **Evaluation Metric:** Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. A score of `~0.13` indicates that the model's predictions are off by approximately 13% on average across the test set.
 
