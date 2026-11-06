@@ -153,7 +153,7 @@ House-Prices-Advanced-Regression-Techniques/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/hngvvan/House-Prices-Advanced-Regression-Techniques.git>
 cd House-Prices-Advanced-Regression-Techniques
 ```
 
