@@ -15,8 +15,6 @@ The goal is to predict the final sale price of homes in Ames, Iowa, based on 79 
 - **Evaluation Metric:** Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. A score of `~0.13` indicates that the model's predictions are off by approximately 13% on average across the test set.
 
 
-<img width="1465" height="305" alt="image" src="https://github.com/user-attachments/assets/31d7c295-6efd-4310-9136-35158b576e1f" />
-
 ---
 
 ## 🛠 Approach & Methodology
